@@ -14,7 +14,7 @@
           axios.get('https://blkikjvgfd.execute-api.us-west-2.amazonaws.com/ditto/get-data')
             .then(function (response) {
               let d = response.data.Items;
-              let curArray = []
+              let curArray = [];
               let curCont;
       
               d.map(types => {
@@ -41,19 +41,16 @@
                   }
                 })
               })
-
-              console.log(curArray[0]);
-
-              const contentNameData = curArray[0].recordData.contest.contestName
-              let hasHyphen = contentNameData.includes("-")
-              let day = ""
-              let nam = ""
-              let contestAndName = contentNameData
+              const contentNameData = curArray[0].recordData.contest.contestName;
+              let hasHyphen = contentNameData.includes("-");
+              let day = "";
+              let nam = "";
+              let contestAndName = contentNameData;
               if(hasHyphen){
-                const parts = contentNameData.split("-")
-                day = parts[0].slice(0, -1)
-                name= parts[1].substring(1)
-                contestAndName = day+'<br>'+name
+                const parts = contentNameData.split("-");
+                day = parts[0].slice(0, -1);
+                name= parts[1].substring(1);
+                contestAndName = day+'<br>'+name;
               }
             document.querySelector('#main-image').innerHTML='<div class="contestName">'+contestAndName+'</div><img id="tatt-img" src="'+curArray[0].recordData.photo+'" />';
             document.querySelector('#win').innerHTML='<div class="data">Contestant Name: <div class="artist">'+curArray[0].name+'</div></div>'+'<div class="data">Artist name: <div class="artist">'+curArray[0].recordData.artist+'</div></div>'+'<div class="data">Artist Location: <div class="artist">'+curArray[0].recordData.artistLocation+'</div></div>';

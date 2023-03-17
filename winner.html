@@ -17,17 +17,16 @@
         d.map(types => {
             if(types.type == 'currentWinner'){
               const contentNameData = types.recordData.contestName;
-              let hasHyphen = contentNameData.includes("-")
-              let day = ""
-              let nam = ""
-              let contestAndName = contentNameData
+              let hasHyphen = contentNameData.includes("-");
+              let day = "";
+              let nam = "";
+              let contestAndName = contentNameData;
               if(hasHyphen){
-                const parts = contentNameData.split("-")
-                day = parts[0].slice(0, -1)
-                name= parts[1].substring(1)
-                contestAndName = day+'<br>'+name
-              }
-              
+                const parts = contentNameData.split("-");
+                day = parts[0].slice(0, -1);
+                name= parts[1].substring(1);
+                contestAndName = day+'<br>'+name;
+              };
               document.querySelector('#main-image').innerHTML='<div class="contestName">'+contestAndName+'</div><img id="tatt-img" src="'+types.recordData.photo+'" />';
               document.querySelector('#win').innerHTML='<div class="data">Contestant Name: '+types.recordData.name+'</div>'+'<div class="data">Artist name: '+types.recordData.artistName+'</div>'+'<div class="data">Artist Location: '+types.recordData.artistLocation+'</div>';
             }
@@ -36,11 +35,8 @@
       .catch(function (error) {
         console.log(error);
       });
-  
-      var cIndex = 0;
-  
-      var handler = setInterval(function() {
-          //changeUp(dataArray[cIndex]);
+      let cIndex = 0;
+      const handler = setInterval(function() {
           cIndex++;
           if (cIndex >= 0) {
               window.location = window.location.href;
