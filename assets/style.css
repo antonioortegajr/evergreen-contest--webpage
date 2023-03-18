@@ -1,23 +1,18 @@
-@font-face {
-  font-family: "Bebas Neue";
-  src: url(https://s3-us-west-2.amazonaws.com/ditto-tatt/assets/big_noodle_titling_oblique.ttf) format("truetype");
-}
-body { font-family: 'The Rumor', sans-serif; }
-body { background-image:url("https://s3-us-west-2.amazonaws.com/ditto-march-15-2019/assets/web_BG.jpg");
-}
 body {
-display: flex;
-background-position: center;
-background-size: 125%;
-}
+  font-family: 'The Rumor', sans-serif;
+  background-image:url("https://s3-us-west-2.amazonaws.com/ditto-march-15-2019/assets/web_BG.jpg");
+  display: flex;
+  background-position: center;
+  background-size: 125%;
+  }
 div#win {
-flex: none;
-color: white;
-text-shadow:
--3px -3px 0 #000,
-3px -3px 0 #000,
--3px 3px 0 #000,
-3px 3px 0 #000;
+  flex: none;
+  color: white;
+  text-shadow:
+  -3px -3px 0 #000,
+  3px -3px 0 #000,
+  -3px 3px 0 #000,
+  3px 3px 0 #000;
 }
 #win{
   float: right;
@@ -31,27 +26,26 @@ div {
   font-size:2.5vw;
   color: white;
 }
-#logo {
-max-width: 40%;
+.logo {
+  max-width: 40%;
 }
 #main-image {
-border-radius: 25px;
-padding-left: 40%;
+  border-radius: 25px;
+  padding-left: 40%;
 }
 #tatt-img {
-border-radius: 25px;
-max-width: 85%;
-margin-left: 20%;
-margin-top: 15%;
-margin-right: 2%;
-
+  border-radius: 25px;
+  max-width: 85%;
+  margin-left: 15%;
+  margin-top: 10%;
+  margin-right: 2%;
 }
 #logo-img {
-padding-left: 15%;
-opacity: 0.5;
-filter: alpha(opacity=50);
-max-width: 50%;
-display:none;
+  padding-left: 15%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  max-width: 50%;
+  display:none;
 }
 .contestName {
   padding-left: 35%;
