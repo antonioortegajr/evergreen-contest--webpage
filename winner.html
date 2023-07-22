@@ -1,48 +1,21 @@
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link href="https://fonts.cdnfonts.com/css/the-rumor" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-  </head>
-  <body>
-    <div id="win"></div></div>
-    <div id="main-image"></div>
-    <script>
-      axios.get('https://blkikjvgfd.execute-api.us-west-2.amazonaws.com/ditto/get-data')
-        .then(function (response) {
-          let d = response.data.Items;
-          console.log(d)
-          d.map(types => {
-              if(types.type == 'currentWinner'){
-                const contentNameData = types.recordData.contestName;
-                let hasHyphen = contentNameData.includes("-");
-                let day = "";
-                let nam = "";
-                let contestAndName = contentNameData;
-                if(hasHyphen){
-                  const parts = contentNameData.split("-");
-                  day = parts[0].slice(0, -1);
-                  name= parts[1].substring(1);
-                  contestAndName = day+'<br>'+name;
-                };
-                document.querySelector('#main-image').innerHTML='<div class="contestName">'+contestAndName+'</div><img id="tatt-img" src="'+types.recordData.photo+'" />';
-                document.querySelector('#win').innerHTML='<div class="data">Contestant Name: <div class="artist">'+types.recordData.name+'</div></div>'+'<div class="data">Artist name: <div class="artist">'+types.recordData.artistName+'</div></div>'+'<div class="data">Artist Location: <div class="artist">'+types.recordData.artistLocation+'</div></div>';
-              }
-          });
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-        let cIndex = 0;
-        const handler = setInterval(function() {
-            cIndex++;
-            if (cIndex >= 0) {
-                window.location = window.location.href;
-            }f
-        }, 35000);
-    </script>
-  </body>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./js/winner.js"></script>
+        <link href="https://fonts.cdnfonts.com/css/neon-energy-x" rel="stylesheet">
+        <link href="./css/main.css" rel="stylesheet" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="v1_2">
+            <div class="v1_3"></div>
+            <div class="v5_4">
+                <div class="v1_4"></div>
+                <span class="v1_5">Contest Name</span><span class="v1_6"></span>
+            </div>
+            <div class="v5_3"><span class="v1_7">Contestant Name:</span><span class="v1_8">Artist Location:</span><span class="v1_9">Artist Name:</span></div>
+            <div class="v5_2"><span class="v1_10"></span><span class="v1_11"></span><span class="v1_12"></span></div>
+        </div>
+    </body>
 </html>
-  
