@@ -7,9 +7,18 @@ These are simple pages to display data about the contest
 ## Use
 
 - Clone this repo
-- Run a local server
-- View pages in browser at localhost
+- Open .html pages in browser
 
 The pages will not show any data if the database does not have data.
 
 Additionally there various states a contest can be in.
+
+## Deployments
+
+Clone repo
+
+Make changes on local files
+
+Upload any changes to the s3 bucket figma-site
+
+https://figma-site.s3.us-west-2.amazonaws.com/index.html
