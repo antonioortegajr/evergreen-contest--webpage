@@ -13,7 +13,7 @@ The pages will not show any data if the database does not have data.
 
 Additionally there various states a contest can be in.
 
-## Deployments
+## Develop and Deployments
 
 Clone repo
 
